@@ -8,6 +8,9 @@
 <style>
 [data-easyphotogallery] {
 }
+.current img {
+	border: 1px solid #000;
+}
 </style>
 <script>
 $(function () {
@@ -17,6 +20,12 @@ $(function () {
 </head>
 
 <body>
-<div data-easyphotogallery></div>
+<div data-easyphotogallery>
+<div><img src="http://dummyimage.com/400x400/eee" alt="" data-easyphotogallery-photo /></div>
+<a href="http://dummyimage.com/400x400/eee" data-easyphotogallery-thumb class="current"><img src="http://dummyimage.com/100x100/eee" alt=""></a>
+<a href="http://dummyimage.com/400x400/f00" data-easyphotogallery-thumb><img src="http://dummyimage.com/100x100/f00" alt=""></a>
+<a href="http://dummyimage.com/400x400/fcc" data-easyphotogallery-thumb><img src="http://dummyimage.com/100x100/fcc" alt=""></a>
+<a href="http://dummyimage.com/400x400/ccf" data-easyphotogallery-thumb><img src="http://dummyimage.com/100x100/ccf" alt=""></a>
+</div>
 </body>
 </html>

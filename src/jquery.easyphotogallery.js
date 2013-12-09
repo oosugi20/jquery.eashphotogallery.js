@@ -29,12 +29,22 @@ Module = function (element, options) {
 	 * _prepareElms
 	 */
 	fn._prepareElms = function () {
+		this.$photo = this.$el.find('[data-easyphotogallery-photo]');
+		this.$thumb = this.$el.find('[data-easyphotogallery-thumb]');
 	};
 
 	/**
 	 * _eventify
 	 */
 	fn._eventify = function () {
+		var _this = this;
+		this.$thumb.on('click mouseenter', function (e) {
+			var $this = $(this);
+			e.preventDefault();
+			_this.$photo.attr('src', $this.attr('href'));
+			_this.$thumb.removeClass('current');
+			$this.addClass('current');
+		});
 	};
 
 })(Module.prototype);
